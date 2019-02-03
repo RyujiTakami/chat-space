@@ -22,3 +22,47 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+## usersテーブル
+|Column|Type|Opitons|
+|------|----|-------|
+|user_name|string|null: false|
+|email|string|null: false, unique: true|
+
+### Association
+- has_many :members
+
+
+## groupsテーブル
+|Column|Type|Opitons|
+|------|----|-------|
+|group_name|string|null: false, unique: true|
+
+### Association
+- has_many :members
+
+
+## membersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreing_key: true|
+|group_id|integer|null: false, foreing_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :group
+- has_many   :messeges
+
+
+## messegesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|body|text|null: false|
+|image|string||
+|group_id|integer|null: false, foreng_key: true|
+|user_id|integer|null: false, foring_key: true|
+
+### Association
+- belongs_to :member

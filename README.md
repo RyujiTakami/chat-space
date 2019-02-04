@@ -61,7 +61,7 @@ Things you may want to cover:
 ## messegesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
+|body|text||
 |image|string||
 |group_id|references|null: false, foreng_key: true|
 |user_id|references|null: false, foring_key: true|

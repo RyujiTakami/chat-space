@@ -49,8 +49,8 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreing_key: true|
-|group_id|integer|null: false, foreing_key: true|
+|user_id|references|null: false, foreing_key: true|
+|group_id|references|null: false, foreing_key: true|
 
 ### Association
 - belongs_to :user
@@ -63,8 +63,8 @@ Things you may want to cover:
 |------|----|-------|
 |body|text|null: false|
 |image|string||
-|group_id|integer|null: false, foreng_key: true|
-|user_id|integer|null: false, foring_key: true|
+|group_id|references|null: false, foreng_key: true|
+|user_id|references|null: false, foring_key: true|
 
 ### Association
 - belongs_to :member

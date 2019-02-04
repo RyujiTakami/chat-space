@@ -67,4 +67,5 @@ Things you may want to cover:
 |user_id|references|null: false, foring_key: true|
 
 ### Association
-- belongs_to :member
+- belongs_to :user
+- belongs_to :group

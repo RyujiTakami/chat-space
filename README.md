@@ -32,8 +32,8 @@ Things you may want to cover:
 
 ### Association
 - has_many :members
-- has_many :groups,   :through  => members
-- has_many :messeges, :through  => members
+- has_many :groups,   through: :members
+- has_many :messeges, through: :members
 
 ## groupsテーブル
 |Column|Type|Opitons|
@@ -42,8 +42,8 @@ Things you may want to cover:
 
 ### Association
 - has_many :members
-- has_many :users,    :through => members
-- has_many :messeges, :through => members
+- has_many :users,    through: :members
+- has_many :messeges, through: :members
 
 
 ## membersテーブル

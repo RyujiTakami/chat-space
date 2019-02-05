@@ -7,7 +7,7 @@
 ### Association
 - has_many :members
 - has_many :groups,   through: :members
-- has_many :messeges, through: :members
+- has_many :messeges
 
 ## groupsテーブル
 |Column|Type|Opitons|
@@ -17,7 +17,7 @@
 ### Association
 - has_many :members
 - has_many :users,    through: :members
-- has_many :messeges, through: :members
+- has_many :messeges
 
 
 ## membersテーブル

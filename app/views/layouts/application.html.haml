@@ -9,30 +9,30 @@
     %link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous")
   %body
     %header
-      %div#top
-        %div.chat-side
-          %div.side-header
-            %div.side-header__box
+      #top
+        .chat-side
+          .side-header
+            .side-header__box
               %p.side-header__box--user-name
                 高見竜二
               %ul.side-header__box--icon
                 %a.fas.fa-edit{href: "#"}
                 %a.fas.fa-cog{href: "#"}
-          %div.groups
+          .groups
             = render "groups/group"
-        %div.chat-main
-          %div.main-header
-            %div.main-header__group
+        .chat-main
+          .main-header
+            .main-header__group
               %p.main-header__group--title テストグループ
               %p.main-header__group--member-list
                 Member：
                 %span 高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二
-            %div.main-header__group--edit
+            .main-header__group--edit
               %a.main-header__group--edit-btn{href: "#"} Edit
           = yield
-          %div.form
+          .form
             = form_for :message, url: "#" do |f|
-              %div.form__box
+              .form__box
                 = f.text_field :body , placeholder: "type a message" , class: "form__box--input"
                 %label.far.fa-image{for: "message_image"}
                   = f.file_field :image, class: "far fa-image"

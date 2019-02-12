@@ -10,31 +10,21 @@
   %body
     %header
       #top
-        -if user_signed_in?
-          .chat-side
-            .side-header
-              .side-header__box
-                %p.side-header__box--user-name
-                  高見竜二
-                %ul.side-header__box--icon
-                  %a.fas.fa-edit{href: "#"}
-                  %a.fas.fa-cog{href: "#"}
-            .groups
-              = render "groups/group"
-          .chat-main
-            .main-header
-              .main-header__group
-                %p.main-header__group--title テストグループ
-                %p.main-header__group--member-list
-                  Member：
-                  %span 高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二
-              .main-header__group--edit
-                %a.main-header__group--edit-btn{href: "#"} Edit
-            = yield
-            .form
-              = form_for :message, url: "#" do |f|
-                .form__box
-                  = f.text_field :body , placeholder: "type a message" , class: "form__box--input"
-                  %label.far.fa-image{for: "message_image"}
-                    = f.file_field :image, class: "far fa-image"
-                  = f.submit type: "submit", value: "Send" , class: "form__box--submit-btn"
+        = render "devise/shared/side-bar"
+        .chat-main
+          .main-header
+            .main-header__group
+              %p.main-header__group--title テストグループ
+              %p.main-header__group--member-list
+                Member：
+                %span 高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二
+            .main-header__group--edit
+              %a.main-header__group--edit-btn{href: "#"} Edit
+          = yield
+          .form
+            = form_for :message, url: "#" do |f|
+              .form__box
+                = f.text_field :body , placeholder: "type a message" , class: "form__box--input"
+                %label.far.fa-image{for: "message_image"}
+                  = f.file_field :image, class: "far fa-image"
+                = f.submit type: "submit", value: "Send" , class: "form__box--submit-btn"

@@ -1,5 +1,2 @@
-$(function() {
-
-  $("header").on
-    console.log($(".main-header"));
-  });
+// = require jquery
+// = require jquery_ujs

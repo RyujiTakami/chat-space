@@ -27,7 +27,7 @@
             line-height:    100px;
             text-align:     right;
 
-        a.fas{
+        .icon{
           color:            white;
           display:          inline;
           text-decoration:  none;
@@ -96,11 +96,11 @@
         }
       }
 
-      &--edit{
+      &__group--edit{
         text-align:       right;
         display:          block;
 
-        &--edit-btn{
+        &-btn{
           line-height:      40px;
           color:            $send_btn-color;
           border: solid     $send_btn-color 0.2px;

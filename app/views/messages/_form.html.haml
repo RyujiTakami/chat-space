@@ -1,0 +1,8 @@
+- if user_signed_in?
+  .form
+    = form_for :message, url: "#" do |f|
+      .form__box
+        = f.text_field :body , placeholder: "type a message" , class: "form__box--input"
+        %label.far.fa-image{for: "message_image"}
+          = f.file_field :image, class: "far fa-image"
+        = f.submit type: "submit", value: "Send" , class: "form__box--submit-btn"

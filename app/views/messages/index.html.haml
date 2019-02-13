@@ -1,2 +1,7 @@
-.messages
-  = render "message"
+#top
+  = render "devise/shared/side-bar"
+  .chat-main
+    = render "groups/main-header"
+    .messages
+      = render "message"
+    = render "messages/form"

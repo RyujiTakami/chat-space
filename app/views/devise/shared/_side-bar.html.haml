@@ -10,4 +10,8 @@
           = link_to edit_user_path(current_user) do
             = fa_icon "cog", class: "icon"
     .groups
-      = render "groups/group"
+      - current_user.groups.each do |group|
+        = link_to groups_path do
+          .group__box
+            %p.group__box--name= group.name
+            %p.group__box--message メッセージはまだありません

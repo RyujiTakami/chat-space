@@ -58,3 +58,5 @@ gem 'devise'
 gem "font-awesome-rails"
 gem 'rails-i18n', '~> 5.1'
 gem 'pry-byebug'
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick'

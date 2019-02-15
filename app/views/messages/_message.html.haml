@@ -1,70 +1,10 @@
 .message__box
-  %p.message__box--user-name
-    高見竜二
-    %span.message__box--user-name-date ●月●日
-  %p.message__box--message この投稿テスト投稿です。
-.message__box
-  %p.message__box--user-name
-    高見竜二
-    %span.message__box--user-name-date ●月●日
-  %p.message__box--message この投稿テスト投稿です。
-.message__box
-  %p.message__box--user-name
-    高見竜二
-    %span.message__box--user-name-date ●月●日
-  %p.message__box--message この投稿テスト投稿です。
-.message__box
-  %p.message__box--user-name
-    高見竜二
-    %span.message__box--user-name-date ●月●日
-  %p.message__box--message この投稿テスト投稿です。
-.message__box
-  %p.message__box--user-name
-    高見竜二
-    %span.message__box--user-name-date ●月●日
-  %p.message__box--message この投稿テスト投稿です。
-.message__box
-  %p.message__box--user-name
-    高見竜二
-    %span.message__box--user-name-date ●月●日
-  %p.message__box--message この投稿テスト投稿です。
-.message__box
-  %p.message__box--user-name
-    高見竜二
-    %span.message__box--user-name-date ●月●日
-  %p.message__box--message この投稿テスト投稿です。
-.message__box
-  %p.message__box--user-name
-    高見竜二
-    %span.message__box--user-name-date ●月●日
-  %p.message__box--message この投稿テスト投稿です。
-.message__box
-  %p.message__box--user-name
-    高見竜二
-    %span.message__box--user-name-date ●月●日
-  %p.message__box--message この投稿テスト投稿です。
-.message__box
-  %p.message__box--user-name
-    高見竜二
-    %span.message__box--user-name-date ●月●日
-  %p.message__box--message この投稿テスト投稿です。
-.message__box
-  %p.message__box--user-name
-    高見竜二
-    %span.message__box--user-name-date ●月●日
-  %p.message__box--message この投稿テスト投稿です。
-.message__box
-  %p.message__box--user-name
-    高見竜二
-    %span.message__box--user-name-date ●月●日
-  %p.message__box--message この投稿テスト投稿です。
-.message__box
-  %p.message__box--user-name
-    高見竜二
-    %span.message__box--user-name-date ●月●日
-  %p.message__box--message この投稿テスト投稿です。
-.message__box
-  %p.message__box--user-name
-    高見竜二
-    %span.message__box--user-name-date ●月●日
-  %p.message__box--message この投稿テスト投稿です。
+  .message__box--user-name
+    = message.user.name
+    %span.message__box--user-name-date
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
+  .message__box--message
+    - if message.content.present?
+      .message__box--message-content
+        = message.content
+      = image_tag message.image.url, class: "message__box--message-image" if message.image.present?

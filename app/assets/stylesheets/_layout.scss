@@ -138,6 +138,13 @@
         &--message{
           font-size:        14px;
           padding-bottom:   40px;
+
+          &-content{
+          }
+          &-image{
+            height: 150px;
+            width:  150px;
+          }
         }
       }
     }

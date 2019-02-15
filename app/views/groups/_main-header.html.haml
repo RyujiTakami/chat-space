@@ -1,9 +1,11 @@
 - if user_signed_in?
   .main-header
     .main-header__group
-      %p.main-header__group--title テストグループ
+      %p.main-header__group--title
+        = @group.name
       %p.main-header__group--member-list
         Member：
-        %span 高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二高見竜二
+        %span
+          = render partial: "members/member", collection: @members
     .main-header__group--edit
-      %a.main-header__group--edit-btn{href: edit_group_path(:id)} Edit
+      %a.main-header__group--edit-btn{href: edit_group_path(@group)} Edit

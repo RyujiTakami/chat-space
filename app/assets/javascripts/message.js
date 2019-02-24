@@ -55,7 +55,8 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $(".messages").append(html)
-      $("#message_content").val("")
+      $("form")[0].reset()
+      $('submit').prop('disabled', false)
       $(".messages").animate({"scrollTop": "100000px"})
     })
 

@@ -129,7 +129,6 @@ $(function(){
       })
 
       .always(function(data){
-        console.log(data)
         $.each(data, function(i, data){
         buildMESSAGE(data);
         $(".messages").animate({"scrollTop": "100000px"})

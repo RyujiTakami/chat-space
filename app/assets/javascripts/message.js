@@ -1,6 +1,11 @@
 $(function(){
   function buildHTML(message){
     if (message.image !== null) {
+      var image_tag = `<img src="${message.image}", class="message__box--message-image">`
+    } else{
+      var image_tag = ""
+                    }
+
     var html = `
               <div class="message__box" data-id=${message.id}>
                 <div class="message__box--user-name">
@@ -13,27 +18,9 @@ $(function(){
                   <div class="message__box--message-content">
                     ${ message.content}
                   </div>
-                  <img src="${message.image}", class="message__box--message-image">
+                  ${image_tag}
                 </div>
               </div>`
-
-                } else{
-
-    var html = `
-              <div class="message__box" data-id=${message.id}>
-                <div class="message__box--user-name">
-                  ${message.user_name}
-                  <span class="message__box--user-name-date">
-                    ${message.created_at}
-                  </span>
-                </div>
-                <div class="message__box--message">
-                  <div class="message__box--message-content">
-                    ${ message.content}
-                  </div>
-                </div>
-              </div>`
-                    }
 
     return html
   }
@@ -76,6 +63,11 @@ $(function(){
 
       function buildMESSAGE(message){
         if (message.image !== null) {
+          var image_tag = `<img src="${message.image}", class="message__box--message-image">`
+        } else{
+          var image_tag = ""
+        }
+
         var html = `
                   <div class="message__box" data-id=${message.id}>
                     <div class="message__box--user-name">
@@ -88,27 +80,9 @@ $(function(){
                       <div class="message__box--message-content">
                         ${ message.content}
                       </div>
-                      <img src="${message.image}", class="message__box--message-image">
+                      ${image_tag}
                     </div>
                   </div>`
-
-                    } else{
-
-        var html = `
-                  <div class="message__box" data-id=${message.id}>
-                    <div class="message__box--user-name">
-                      ${message.user_name}
-                      <span class="message__box--user-name-date">
-                        ${message.created_at}
-                      </span>
-                    </div>
-                    <div class="message__box--message">
-                      <div class="message__box--message-content">
-                        ${ message.content}
-                      </div>
-                    </div>
-                  </div>`
-                        }
 
         message_list.append(html)
       }

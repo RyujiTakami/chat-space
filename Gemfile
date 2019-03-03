@@ -46,6 +46,11 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
 end
 
 group :development do
@@ -68,3 +73,4 @@ gem 'rails-i18n', '~> 5.1'
 gem 'pry-byebug'
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
+gem 'fog-aws'

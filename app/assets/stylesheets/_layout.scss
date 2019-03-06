@@ -39,7 +39,7 @@
     .groups{
       height:             calc(100vh - 120px);
       padding:            20px 20px 0;
-      overflow:           scroll;
+      overflow-y:         scroll;
 
       .group__box{
         background-color:   $side-color;
@@ -77,7 +77,7 @@
         height:         100px;
         width:          calc(100vw - 500px);
         display:        block;
-        overflow:       scroll;
+        overflow-y:     scroll;
         float:          left;
 
         &--title{
@@ -116,7 +116,7 @@
     .messages{
       height:         calc(100vh - 257px);
       background:     #f5f5f5;
-      overflow:       scroll;
+      overflow-y:     scroll;
       padding:        46px 40px 20px 40px;
 
       .message__box{

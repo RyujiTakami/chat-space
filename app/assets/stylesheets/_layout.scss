@@ -61,6 +61,7 @@
   .chat-main{
     height:         100vh;
     width:          calc(100vw - 300px);
+    -ms-width:      calc(100vw - 300px);
     background:     $main_back-color;
     float:          left;
 
